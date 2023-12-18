@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Code-Storm/",
+    "build": "vite build --base=/js_94_nahirniy/",
     "preview": "vite preview"
   },
   "devDependencies": {
