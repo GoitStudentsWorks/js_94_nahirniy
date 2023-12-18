@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/js_94_nahirniy/assets/favicon-dc3fb52b.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Internet grocery store (favourite basket products)"
+    />
+    <title>Cart</title>
+    <link
+      rel="preload"
+      as="font"
+      href="/js_94_nahirniy/assets/NeueMontreal-Medium-dc032536.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="/js_94_nahirniy/assets/NeueMontreal-Regular-c93d2491.woff2"
+      crossorigin="anonymous"
+    />
+    
+    <script type="module" crossorigin src="/js_94_nahirniy/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_94_nahirniy/assets/vendor-9038a9ee.js">
+    <link rel="modulepreload" crossorigin href="/js_94_nahirniy/assets/scroll-up-855fb9c5.js">
+    <link rel="stylesheet" href="/js_94_nahirniy/assets/scroll-up-b02251d5.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="header-container container">
+    <div class="header-logo">
+      <a class="header-logo-link" href="./index.html" aria-label="logo">
+        <svg class="header-logo-svg">
+          <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-logo-header"></use>
+        </svg>
+      </a>
+    </div>
+    <nav class="header-navigation">
+      <ul class="header-navigation-list">
+        <li class="header-navigation-item">
+          <a
+            class="header-navigation-home"
+            href="./index.html"
+            aria-label="home page"
+            >Home</a
+          >
+        </li>
+        <li class="header-navigation-item">
+          <a
+            class="navigation-cart"
+            href="./cart.html"
+            aria-label="Go to shopping cart (0 items)"
+          >
+            <span class="header-navigation-cart">
+              <svg class="header-logo-busket">
+                <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-basket"></use>
+              </svg>
+            </span>
+            <span class="header-navigation-link"
+              >Cart (<span class="number-products">0</span>)</span
+            >
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button
+      type="button"
+      class="scroll-up-btn is-hidden"
+      aria-label="scroll up button"
+    >
+      <svg class="arrow-scroll">
+        <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-arrow-down"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+    <main>
+      <section class="cart-section">
+  <div class="container">
+    <div class="cart-content-wrap">
+      <div class="product-list-container">
+  <div class="cart-title-container">
+    <div class="cart-wrap-basket">
+      <svg class="cart-icon-basket" width="18" height="18">
+        <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-basket"></use>
+      </svg>
+    </div>
+    <h2 class="cart-title"></h2>
+  </div>
+
+  <div class="cart-btn-wrap">
+    <button
+      name="button"
+      class="cart-btn-del-all"
+      aria-label="Delete all products in basket"
+    >
+      Delete all
+      <svg class="cart-icon-all" width="24" height="24">
+        <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+
+  <ul class="cart-item-container cart-scrol"></ul>
+</div>
+
+      <div class="order-products">
+  <h3 class="order-products-title">Your Order</h3>
+  <div class="order-total">
+    <div class="order-total-name">Total</div>
+    <div class="order-total-value">
+      Sum:<span class="order-products-sum">$0.00</span>
+    </div>
+  </div>
+  <form class="order-products-form">
+    <div class="order-products-form-input">
+      <input
+        type="email"
+        required
+        id="email"
+        name="email_address"
+        placeholder="Enter your email"
+        pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$"
+      />
+      <label for="email">Mail:</label>
+    </div>
+    <button class="button" type="submit" aria-label="Submit button">
+      Checkout
+    </button>
+  </form>
+</div>
+
+    </div>
+    <div class="cart-yellow-container visually-hidden">
+  <img
+    class="cart-yellow-img"
+    srcset="/js_94_nahirniy/assets/yellow-shopping-basket-1d-360edb75.webp 1x, /js_94_nahirniy/assets/yellow-shopping-basket-2d-f8d8ea48.webp 2x"
+    src="/js_94_nahirniy/assets/yellow-shopping-basket-2d-f8d8ea48.webp"
+    alt="yellow shopping basket "
+  />
+
+  <h3 class="cart-yellow-title">
+    Your basket is <span class="cart-yellow-span">empty...</span>
+  </h3>
+  <p class="cart-yellow-text">
+    Go to the main page to select your favorite <br />
+    products and add them to the cart.
+  </p>
+</div>
+
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-logo">
+      <div class="footer-icons">
+        <a href="./index.html" class="link-logo" aria-label="logo">
+          <svg class="logo">
+            <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-logo-footer"></use>
+          </svg>
+        </a>
+        <ul class="list-social">
+          <li class="item-social">
+            <a
+              href="https://www.facebook.com/goITclub/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <svg class="logo-social" width="40" height="40">
+                <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item-social">
+            <a
+              href="https://www.instagram.com/goitclub/"
+              target="_blank"
+              class="item-logo"
+              aria-label="instagram"
+            >
+              <svg class="logo-social" width="40" height="40">
+                <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item-social">
+            <a
+              href="https://www.youtube.com/c/GoIT"
+              target="_blank"
+              aria-label="Youtube"
+            >
+              <svg class="logo-social" width="40" height="40">
+                <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="motto">
+        <h2 class="first-motto">Discover the Variety of Flavors and Quality</h2>
+        <p class="second-motto">
+          An online store where you will find fresh, natural and delicious
+          products for a healthy life and unforgettable gastronomic adventures.
+        </p>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <p class="email-title">Subscribe and learn about new products!</p>
+      <form class="form-footer">
+        <label class="email-label">
+          <input
+            class="input-label"
+            type="email"
+            name="email"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$"
+            required=""
+            placeholder="Email"
+            maxlength="64"
+            minlength="6"
+          />
+        </label>
+        <button
+          type="submit"
+          class="subscribe"
+          id="data-modal-open"
+          aria-label="Send email button"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+    <div class="about">
+      <div class="services-list">
+        <p class="services">Food Boutique. All rights reserved.</p>
+        <div class="privacy-wrap">
+          <p class="services-one">Privacy Policy</p>
+          <span class="slash">/</span>
+          <p class="services-one">Terms of Service</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="modal-backdrop-order is-hidden">
+  <div class="modal-order">
+    <button class="close-modal-order-btn" aria-label="Close modal window">
+      <svg class="modal-order-close">
+        <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="modal-order-img">
+      <img
+        srcset="/js_94_nahirniy/assets/order_success-1x-14915e12.webp 1x, /js_94_nahirniy/assets/order_success-2x-f4bf8874.webp 2x"
+        alt="order-success"
+      />
+    </div>
+    <div class="modal-order-title">Order success</div>
+    <p class="modal-order-text">
+      Thank you for shopping at Food Boutique. Your order has been received and
+      is now being freshly prepared just for you! Get ready to indulge in
+      nourishing goodness, delivered right to your doorstep. We're thrilled to
+      be part of your journey to better health and happiness.
+    </p>
+  </div>
+</div>
+
+    <div class="modal-backdrop-subscription is-hidden">
+  <div class="modal-subscription visually-hidden">
+    <div class="modal_subcont">
+      <button class="close" aria-label="Close modal window">
+        <svg class="icon-close">
+          <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="modal-subtext">
+        <h2 class="title-sub">
+          Thanks for subscribing for <span class="span-text">new</span> products
+        </h2>
+        <p class="paragraph-sub">
+          We promise you organic and high-quality products that will meet your
+          expectations. Please stay with us and we promise you many pleasant
+          surprises.
+        </p>
+        <picture class="modal-subscription-img">
+          <source
+            media="(min-width: 1440px)"
+            srcset="/js_94_nahirniy/assets/desc1x-9b7eb662.webp 1x, /js_94_nahirniy/assets/desc2x-4def9d28.webp 2x"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/js_94_nahirniy/assets/desc1x-9b7eb662.webp 1x, /js_94_nahirniy/assets/tab2x-1c1b568a.webp 2x"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/js_94_nahirniy/assets/mob1x-f81e30b7.webp 1x, /js_94_nahirniy/assets/mob2x-8c98a80e.webp 2x"
+          />
+
+          <img
+            src="/js_94_nahirniy/assets/desc2x-4def9d28.webp"
+            alt="vegetable"
+            class="modal-img"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+  <div class="modal-unsubscription visually-hidden">
+    <div class="modal-unsubcont">
+      <button class="close" aria-label="Close modal window">
+        <svg class="icon-close">
+          <use href="/js_94_nahirniy/assets/sprite-7f96c85e.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="modal-unsubtext">
+        <h3 class="title-unsub">
+          This <span class="span-text">email address</span> has already been
+          entered
+        </h3>
+        <p class="paragraph-unsub">
+          You have already subscribed to our new products. Watch for offers at
+          the mailing address.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </body>
+</html>
